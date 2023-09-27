@@ -1,0 +1,9 @@
+{
+	"name": "kakriaADF",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b9746781-bd11-44dd-aee3-cccd9e53f570",
+		"tenantId": "b9fec68c-c92d-461e-9a97-3d03a0f18b82"
+	}
+}
