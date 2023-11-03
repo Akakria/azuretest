@@ -5,7 +5,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://maxifleet.komatsuforest.com:6001/Stanford/File/V1.0/",
+			"url": "https://maxifleet.komatsuforest.com:6001/Stanford/File/V1.0",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous",
 			"authHeaders": {
