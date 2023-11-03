@@ -6,7 +6,17 @@
 		"typeProperties": {
 			"url": "https://maxifleet.komatsuforest.com:6001/Stanford",
 			"enableServerCertificateValidation": true,
-			"authenticationType": "Anonymous"
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"X-API-Key": {
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "testKV",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "KomatsuTestApi"
+				}
+			}
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
