@@ -1,0 +1,22 @@
+{
+	"name": "KomatsuHTTP",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://maxifleet.komatsuforest.com:6001/Stanford",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"X-API-Key": {
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "testKV",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "KomatsuTestApi"
+				}
+			}
+		}
+	}
+}
