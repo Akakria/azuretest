@@ -86,6 +86,10 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"url": {
+									"value": "@concat('/Stanford/File/V1.0/MOM/', item())",
+									"type": "Expression"
+								},
 								"method": "GET",
 								"linkedServices": [
 									{
