@@ -36,15 +36,69 @@
 			{
 				"name": "ForEachMOM",
 				"type": "ForEach",
-				"dependsOn": [],
-				"userProperties": []
+				"dependsOn": [
+					{
+						"activity": "ListMOM",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('ListMOM').output.Response.Entry",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "ActivityInsideForEach",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"enableStaging": false
+							}
+						},
+						{
+							"name": "GET_MOM",
+							"type": "WebActivity",
+							"dependsOn": [
+								{
+									"activity": "ActivityInsideForEach",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"method": "GET",
+								"linkedServices": [
+									{
+										"referenceName": "KomatsuHTTP",
+										"type": "LinkedServiceReference"
+									}
+								]
+							}
+						}
+					]
+				}
 			}
 		],
-		"variables": {
-			"ArrayMOM": {
-				"type": "Array"
-			}
-		},
 		"annotations": []
 	}
 }
