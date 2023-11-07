@@ -11,7 +11,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat('/Stanford/Files/V1.0/MOM?StartDate=', formatDateTime(addDays(utcNow(), -1), 'yyyy-MM-ddT00:00:00.0Z'), '&EndDate=', formatDateTime(utcNow(), 'yyyy-MM-ddT00:00:00.0Z'))",
+					"value": "@concat('/Stanford/File/V1.0/MOM?StartDate=', formatDateTime(addDays(utcNow(), -1), 'yyyy-MM-ddT00:00:00.0Z'), '&EndDate=', formatDateTime(utcNow(), 'yyyy-MM-ddT00:00:00.0Z'))",
 					"type": "Expression"
 				}
 			}
