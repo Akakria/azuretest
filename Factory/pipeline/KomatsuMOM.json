@@ -34,12 +34,17 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEachMOM",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": []
 			}
 		],
+		"variables": {
+			"ArrayMOM": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
